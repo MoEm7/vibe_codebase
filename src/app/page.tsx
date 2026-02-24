@@ -41,10 +41,10 @@ export default function Home() {
             Guest Mode
           </Link>
           <Link
-            href="/register"
+            href="/login"
             className="text-coffee-dark border-2 border-accent px-5 py-2 rounded-xl font-bold no-underline hover:bg-accent hover:text-white transition-all"
           >
-            Sign Up Now
+            Login
           </Link>
         </div>
       </div>

@@ -1,41 +1,77 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ☕ Coffee Carriers
 
-## Getting Started
+**Discover mobile coffee makers near you — or become one.**
 
-First, run the development server:
+Coffee Carriers connects independent mobile coffee sellers (**Makers**) with coffee lovers (**Sippers**) in your area. No app store needed — works right in your browser.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗺️ What Can You Do?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### As a Guest (no account needed)
+- Browse the map to see coffee makers near you
+- See ratings and how far they are
+- Explore the area freely
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ☕ As a Sipper (coffee lover)
+- See full menus, prices, and reviews
+- Get directions straight to any maker
+- Pre-order your coffee before you arrive
+- Save your favorite makers
+- Leave ratings and reviews
 
-## Learn More
+### 🧑‍🍳 As a Maker (mobile coffee seller)
+- Set up your shop profile with logo and description
+- Add your menu with photos and prices
+- Pin your location on the map
+- Toggle **"I'm Live"** when you're open and ready
+- Receive and manage pre-orders in real time
+- Write blog posts to share your coffee story
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Getting Started
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 1. Create an Account
+Go to [/register](/register) and choose your role:
+- **I'm a Sipper** — I want to find coffee
+- **I'm a Maker** — I want to sell coffee
 
-## Deploy on Vercel
+### 2. Sippers — Find Your Coffee
+- Head to **Explore** to see makers on the map
+- Tap any marker to see their menu and ratings
+- Hit **"Get Me There"** for instant directions
+- Or tap **"Pre-Order"** to have it ready when you arrive
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Makers — Set Up Your Shop
+After registering, go to your **Studio** to:
+1. Fill in your shop name, bio, and upload your logo
+2. Add your menu items with photos and prices
+3. Drop your pin on the map at your current location
+4. Flip the **"I'm Live"** switch when you're open
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# vibe_codebase
-Coffee Carriers - A platform where unknown coffee makers can declare themselves with their coffee cart locations and products, and customers can discover and find them nearby.
->>>>>>> 205bb993184fab8f63db83ea3c75e87c5caeff66
+---
+
+## 🔔 Real-Time Features
+- Sippers see makers go **live** on the map instantly
+- Order status updates in real time — no refreshing needed
+- Makers get notified the moment a new order comes in
+
+---
+
+## 📱 Works Everywhere
+Coffee Carriers works on any device — phone, tablet, or desktop. No app download required.
+
+---
+
+## 🌍 Languages
+English is available now. Arabic, French, and German coming soon.
+
+---
+
+## 💬 Need Help?
+Use the **Contact** page to reach us. We'd love to hear from you!
+
+---
+
+*Made with ☕ by the Coffee Carriers team.*
