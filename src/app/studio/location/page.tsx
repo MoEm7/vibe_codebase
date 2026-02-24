@@ -51,18 +51,38 @@ export default function LocationPage() {
     setError(null);
     setMessage("Detecting your location...");
 
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setLatitude(String(position.coords.latitude));
-        setLongitude(String(position.coords.longitude));
-        setMessage("Location detected! Click Save to confirm.");
-      },
-      (err) => {
+    const onSuccess = (position: GeolocationPosition) => {
+      setLatitude(String(position.coords.latitude));
+      setLongitude(String(position.coords.longitude));
+      setMessage("✅ Location detected! Click Save to confirm.");
+    };
+
+    const onError = (err: GeolocationPositionError) => {
+      setMessage(null);
+      if (err.code === 1) {
+        setError("Permission denied. Click the 🔒 lock icon in your browser address bar → set Location to Allow, then try again.");
+      } else if (err.code === 2) {
+        setError("Location signal unavailable. Trying again with lower accuracy...");
+        navigator.geolocation.getCurrentPosition(
+          onSuccess,
+          (fallbackErr) => {
+            setError("Still couldn't detect location. On Windows, go to Settings → Privacy → Location and make sure it's On. Or enter coordinates manually below.");
+          },
+          { enableHighAccuracy: false, timeout: 15000, maximumAge: 60000 }
+        );
+      } else if (err.code === 3) {
+        setError("Timed out. Retrying with lower accuracy...");
+        navigator.geolocation.getCurrentPosition(
+          onSuccess,
+          () => setError("Location timed out. Try entering coordinates manually, or use Google Maps to find your lat/lng."),
+          { enableHighAccuracy: false, timeout: 20000, maximumAge: 60000 }
+        );
+      } else {
         setError("Could not detect location: " + err.message);
-        setMessage(null);
-      },
-      { enableHighAccuracy: true }
-    );
+      }
+    };
+
+    navigator.geolocation.getCurrentPosition(onSuccess, onError, { enableHighAccuracy: true, timeout: 10000 });
   }
 
   async function handleSave(e: React.FormEvent) {
