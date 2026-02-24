@@ -21,8 +21,8 @@ export default function AboutPage() {
           </p>
           <p className="text-coffee-main leading-relaxed mb-3">
             Built by <strong className="text-coffee-dark">Mohab</strong> —{" "}
-            <a href="mailto:engmohem7@gmail.com" className="text-accent font-bold no-underline hover:underline">
-              engmohem7@gmail.com
+            <a href="https://www.linkedin.com/in/mohab-eb04269115" target="_blank" rel="noopener noreferrer" className="text-accent font-bold no-underline hover:underline">
+              LinkedIn
             </a>
           </p>
           <p className="text-coffee-main leading-relaxed">

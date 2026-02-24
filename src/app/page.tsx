@@ -19,6 +19,13 @@ const SIPPER_LINKS = [
   { href: "/blog", icon: "📝", label: "Blog" },
 ];
 
+const ADMIN_LINKS = [
+  { href: "/admin", icon: "🛡️", label: "Dashboard" },
+  { href: "/admin/blog", icon: "📝", label: "Blog Queue" },
+  { href: "/admin/users", icon: "👥", label: "Users" },
+  { href: "/blog", icon: "🌐", label: "Public Blog" },
+];
+
 export default function Home() {
   const [role, setRole] = useState<string | null>(null);
   const [displayName, setDisplayName] = useState<string>("");
@@ -62,9 +69,9 @@ export default function Home() {
     );
   }
 
-  if (role === "maker" || role === "sipper") {
-    const links = role === "maker" ? MAKER_LINKS : SIPPER_LINKS;
-    const greeting = role === "maker" ? "Your coffee empire awaits ☕" : "Find your next great cup ☕";
+  if (role === "maker" || role === "sipper" || role === "admin") {
+    const links = role === "maker" ? MAKER_LINKS : role === "admin" ? ADMIN_LINKS : SIPPER_LINKS;
+    const greeting = role === "maker" ? "Your coffee empire awaits ☕" : role === "admin" ? "Platform control center 🛡️" : "Find your next great cup ☕";
     return (
       <main className="min-h-[calc(100vh-100px)] flex items-center justify-center p-5">
         <div className="text-center max-w-[550px] w-full p-12 bg-bg-card backdrop-blur-[10px] rounded-[40px] shadow-[0_20px_50px_rgba(62,39,35,0.08)] border border-white/80">
