@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient, createAdminClient } from "@/lib/supabase/server";
 
-export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params;
+export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
+  const { id } = params;
   const supabase = await createClient();
   const admin = createAdminClient();
 

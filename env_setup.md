@@ -14,7 +14,7 @@
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://gxninvvafebpgkpmjvqe.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_f_DrH79D6Ke_iEbF8xLhew_vXuCnraU
-SUPABASE_SERVICE_ROLE_KEY=sb_secret_Ig1-pfl-nyYpaGg_6cP3cQ_UcCmRULm
+SUPABASE_SERVICE_ROLE_KEY=<REDACTED — never share or commit this key>
 ```
 
 ## Vercel Environment Variables
